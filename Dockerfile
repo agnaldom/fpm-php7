@@ -1,4 +1,4 @@
-FROM php:7.0-fpm
+FROM php:7.2-rc-fpm
 MAINTAINER Agnaldo Marinho <agnaldomarinho7@gmail.com> (@agnaldo_nm)
 
 # Disable remote database security requirements.
