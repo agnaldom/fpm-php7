@@ -5,11 +5,10 @@ MAINTAINER Agnaldo Marinho <agnaldomarinho7@gmail.com> (@agnaldo_nm)
 ENV JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1
 
 # Install PHP extensions
-RUN apt-get update && apt-get install -y libpng-dev git libjpeg-dev libmcrypt-dev zip unzip && rm -rf /var/lib/apt/lists/* \
+RUN apt-get update && apt-get install -y libpng-dev git libjpeg-dev  libmcrypt-dev zip unzip && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
     && docker-php-ext-install gd
 RUN docker-php-ext-install mysqli
-RUN docker-php-ext-install mcrypt
 RUN docker-php-ext-install zip
 
 VOLUME /var/www/html
