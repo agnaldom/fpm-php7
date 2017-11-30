@@ -15,7 +15,7 @@ RUN docker-php-ext-install zip
 VOLUME /var/www/html
 
 # Download package JoomlaGov
-git clone https://github.com/joomlagovbr/joomla-3.x.git /var/www/html
+RUN git clone https://github.com/joomlagovbr/joomla-3.x.git /var/www/html
 
 # Copy init scripts and custom .htaccess
 COPY docker-entrypoint.sh /entrypoint.sh
